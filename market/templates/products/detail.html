@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product - {{ product.name }}</title>
+</head>
+<body>
+    <h1>Book Name: {{ product.name }}</h1>
+    <p>Book Page Count: {{ product.page_count }}</p>
+    <p>Book Category: {{ product.category }}</p>
+    <p>Book Author: {{ product.author_name }}</p>
+    <p>Book Price: {{ product.price }}</p>
+    <p>Book Image: <img src="{{ product.image.url }}" alt="{{ product.name }}"></p>
+
+</body>
+</html>

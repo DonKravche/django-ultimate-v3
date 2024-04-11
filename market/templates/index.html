@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Pages</title>
+</head>
+<body>
+    <h1>Here Should be list of Books:</h1>
+    <div>{{ request.GET.name }}</div>
+{#    <div>request.GET.name</div>#}
+
+    <div>
+        <ul>
+            {% for product in page.object_list %}
+{#            <li><a href="/market/products/{{ product.id }}/">{{ product.name }}"</a></li>#}
+                <li><a href="{% url 'market:get_product' product.id %}">{{ product.name }}"</a></li>
+            {% endfor %}
+        </ul>
+        {% if page.has_next %}
+            <div>
+                <a href="{% url 'market:index' %}?page={{ page.next_page_number}}">Next Page</a>
+            </div>
+        {% endif %}
+
+        {% if page.has_previous %}
+            <div>
+                <a href="{% url 'market:index' %}?page={{ page.previous_page_number}}">Previous Page</a>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
