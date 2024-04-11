@@ -54,7 +54,7 @@ also improved code:
 
 
 # new Version 1.0.2
-## WHats new?
+## Whats new?
 
 1. fixed few issues from previous version
 2. added sort function in market app (now you can filter items using: id, name, price, author name, pages, img)
