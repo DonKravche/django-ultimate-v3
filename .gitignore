@@ -1,0 +1,8 @@
+.venv
+.env
+.venv/
+VENV
+
+.idea
+media
+db.sqlite3
