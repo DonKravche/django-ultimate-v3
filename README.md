@@ -75,8 +75,9 @@ also improved code:
 
 - One book has one author - One author has many books
 
-A category model was also created in the project
+ A category model was also created in the project
 
-- One book has many categories and one category has many books
+ - One book has many categories and one category has many books
+
 Feel free to use my code!
 GL HF <3
