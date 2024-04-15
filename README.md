@@ -67,6 +67,16 @@ also improved code:
 
 6.  added next & previous pages for better user experience
 
+# New Version 1.0.3
+## Whats new?
+1. fixed few issues from previous version
+2. *** Changed Main Page Visula From Django Default page to 404 not found*** remains same when you run django
+3. Added an author model to the project, which is linked to the book model,
 
+- One book has one author - One author has many books
+
+A category model was also created in the project
+
+- One book has many categories and one category has many books
 Feel free to use my code!
 GL HF <3
