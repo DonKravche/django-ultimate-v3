@@ -2,5 +2,6 @@ python=>3.11
 
 pip install django
 Django==4.2.5
+Django==4.2.11
 
 pip install pillow

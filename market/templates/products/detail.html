@@ -7,8 +7,9 @@
 <body>
     <h1>Book Name: {{ product.name }}</h1>
     <p>Book Page Count: {{ product.page_count }}</p>
-    <p>Book Category: {{ product.category }}</p>
-    <p>Book Author: {{ product.author_name }}</p>
+    <h3>Book Category's:</h3>
+    <p>{{ product.category.all|join:", " }}</p>
+    <p>Book Author: {{ product.author }}</p>
     <p>Book Price: {{ product.price }}</p>
     <p>Book Image: <img src="{{ product.image.url }}" alt="{{ product.name }}"></p>
 

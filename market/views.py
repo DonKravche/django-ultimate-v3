@@ -1,7 +1,7 @@
 from django.core.paginator import Paginator, Page
 from django.forms import model_to_dict
-from django.http import JsonResponse, HttpResponse
-from django.shortcuts import render
+from django.http import JsonResponse, HttpResponse, Http404
+from django.shortcuts import render, get_object_or_404
 
 from market import models
 from market.models import Books
@@ -13,7 +13,8 @@ def get_products(request):
 
 
 def get_product(request, product_id):
-    product = Books.objects.filter(id=product_id).first()
+    # product = Books.objects.filter(id=product_id).first()
+    product = get_object_or_404(Books, id=product_id)
     return render(request, 'products/detail.html', {'product': product})
 
 
